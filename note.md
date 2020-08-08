@@ -17,3 +17,13 @@ module.exports = {
   },
 };
 ```
+
+```js vue
+export default {
+  name: 'ElRow' //在子组件可以通过parent.$options.name访问到
+}
+```
+
+```js
+@ //src路径
+```

@@ -220,15 +220,9 @@
 </template>
 
 <script>
-import ElRow from '@element/Row.vue';
-import ElCol from '@element/Col.vue';
 
 export default {
   name: 'App',
-  components: {
-    ElRow,
-    ElCol,
-  },
 };
 </script>
 <style lang='scss'>
