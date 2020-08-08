@@ -27,3 +27,21 @@ export default {
 ```js
 @ //src路径
 ```
+
+```scss
+$name:value;
+@mixin b{ 
+  @at-root{
+    #{$name}{
+      @content;
+    }
+  }
+}
+@mixin when($state){
+  @each $val in $state{
+
+  }
+}
+@include b(){};
+@include when(('block','inline-block'))
+```
