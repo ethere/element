@@ -44,4 +44,8 @@ $name:value;
 }
 @include b(){};
 @include when(('block','inline-block'))
+
+//scss文件中的符号两边留空格
 ```
+
+element-variables.scss文件中可以重新定义变量的值

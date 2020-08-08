@@ -3,7 +3,7 @@
 
 @include b('row'){
     @include utils-clearfix();
-    @include m(('fix','item')){
+    @include m('fix'){
         display: flex;
         &::after{
             display: none;
