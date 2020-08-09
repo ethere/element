@@ -17,6 +17,8 @@
     font-weight: $--button-font-weight;
     border-radius: $--button-border-radius;
 
+    line-height: 1;
+
     @include utils-user-select(none);
 
     &+& {
@@ -32,6 +34,41 @@
     &:active {
         border-color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
         color: mix($--color-black, $--color-primary, $--button-active-shade-percent);
+    }
+
+    @include when(plain) {
+        &:hover {
+            background-color: $--color-white;
+            border-color: $--color-primary;
+            color: $--color-primary;
+        }
+
+        &:active {
+            border-color: mix($--color-black, $--color-primary, 10%);
+            color: mix($--color-black, $--color-primary, 10%);
+        }
+    }
+
+    @include when(round) {
+        padding-left: 23px;
+        padding-right: 23px;
+        border-radius: 20px;
+    }
+
+    @include when(circle) {
+        padding: $--button-padding-vertical;
+        border-radius: 50%;
+    }
+
+    @include when(disabled) {
+
+        &,
+        &.is-plain {
+            cursor: not-allowed;
+            background-color: $--button-disabled-background-color;
+            border-color: $--button-disabled-border-color;
+            color: $--button-disabled-font-color;
+        }
     }
 
     @include m(primary) {
