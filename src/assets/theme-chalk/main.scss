@@ -1,0 +1,9 @@
+@import './mixin/mixin.scss';
+
+@include b(main){
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+    padding: $--main-padding;
+    flex: 1;
+}

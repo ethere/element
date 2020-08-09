@@ -1,0 +1,7 @@
+@import './mixin/mixin.scss';
+
+@include b(footer){
+    box-sizing: border-box;
+    flex-shrink: 0;
+    padding: $--footer-padding;
+}
