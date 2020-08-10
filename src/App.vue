@@ -1,32 +1,22 @@
 <template>
   <div id="app">
-    <el-button-group>
-      <el-button type="primary" icon="el-icon-arrow-left">上一页</el-button>
-      <el-button type="primary">
-        下一页
-        <i class="el-icon-arrow-right el-icon--right"></i>
-      </el-button>
-    </el-button-group>
-    <el-button-group>
-      <el-button type="primary" icon="el-icon-edit"></el-button>
-      <el-button type="primary" icon="el-icon-share"></el-button>
-      <el-button type="primary" icon="el-icon-delete"></el-button>
-    </el-button-group>
-    <el-button-group>
-      <el-button type="primary" icon="el-icon-edit" circle></el-button>
-    </el-button-group>
-    <el-button-group>
-      <el-button type="primary" icon="el-icon-edit" round></el-button>
-    </el-button-group>
-    <el-button-group>
-      <el-button type="primary" icon="el-icon-edit"></el-button>
-    </el-button-group>
+    <el-row>
+      <el-button type="primary">默认按钮</el-button>
+      <el-button autofocus type="primary" >自动聚焦</el-button>
+      <el-button type="primary" native-type="submit">按钮</el-button>
+      <el-button type="primary" @click="handleClick">点击事件按钮</el-button>
+    </el-row>
   </div>
 </template>
 
 <script>
 export default {
   name: 'App',
+  methods: {
+    handleClick() {
+      console.log('xxx');
+    },
+  },
 };
 </script>
 
