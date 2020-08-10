@@ -3,13 +3,17 @@
     class="el-button"
     :class="[
     type ? `el-button--${type}`:'',
+    size ? `el-button--${size}`:'',
     plain?'is-plain':'',
     {'is-round':round},
     {'is-circle':circle},
     {'is-disabled':disabled}
     ]">
-    <i v-if="icon" :class="[icon]"></i>
-    <slot></slot>
+    <i v-if="icon && !loading" :class="[icon]"></i>
+    <i v-if="loading" class="el-icon-loading"></i>
+    <span v-if="$slots.default">
+      <slot></slot>
+    </span>
   </button>
 </template>
 <script>
@@ -22,6 +26,8 @@ export default {
     circle: Boolean,
     icon: String,
     disabled: Boolean,
+    loading: Boolean,
+    size: String,
   },
 };
 </script>
