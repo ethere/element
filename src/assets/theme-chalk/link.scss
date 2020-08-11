@@ -1,5 +1,59 @@
 @import './mixin/mixin.scss';
 
-@include b(link){
-    
+@include b(link) {
+    text-decoration: none;
+    color: $--link-font-color;
+    font-size: $--link-font-size;
+    font-weight: $--link-font-weight;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        color: $--color-primary;
+    }
+
+    [class *='el-icon-'] {
+        &+span {
+            margin-left: 5px;
+        }
+    }
+
+    @include when(underline) {
+        &:hover::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 0;
+            bottom: 0;
+            border-bottom: 1px solid $--color-primary;
+        }
+    }
+
+    @include when(disabled) {
+        cursor: not-allowed;
+        color: #c0c4cc;
+    }
+
+    @each $type,
+    $color in $--link-type {
+        @include m($type) {
+            color: $color;
+
+            &:hover {
+                color: mix($--color-white, $color, 20%);
+            }
+
+            @include when(underline){
+                &:hover::after{
+                    border-bottom-color: $color;
+                }
+            }
+
+            @include when(disabled){
+                color: mix($--color-white,$color);
+            }
+        }
+    }
+
 }

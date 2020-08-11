@@ -125,6 +125,12 @@ $--button-disabled-font-color: $--color-text-placeholder !default; // #c0c4cc
 $--button-active-shade-percent: 10% !default;
 $--button-hover-tint-percent: 20% !default;
 
+/*Link
+-----------------------------*/
+$--link-font-color:$--color-text-regular;
+$--link-font-size:$--font-size-base;
+$--link-font-weight:500;
+$--link-decoration-color:$--color-primary;
 
 /* Break Point
 --------------------------*/
@@ -154,4 +160,12 @@ $--breakpoints-spec: (
     'lg-only': (min-width: #{$--lg}) and (max-width: #{$--xl - 1}),
     'lg-and-down': (max-width: $--xl - 1),
     'xl-only': (min-width: $--xl),
+);
+
+$--link-type: (
+   primary: $--color-primary,
+   success: $--color-success,
+   warning: $--color-warning,
+   danger: $--color-danger,
+   info: $--color-info,
 )
