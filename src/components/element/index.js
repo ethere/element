@@ -8,8 +8,21 @@ import Footer from './footer';
 import Icon from './icon';
 import Button from './button';
 import ButtonGroup from './button-group';
+import Link from './link';
 
-const components = [Row, Col, Container, Aside, Main, Header, Footer, Icon, Button, ButtonGroup];
+const components = [
+  Row,
+  Col,
+  Container,
+  Aside,
+  Main,
+  Header,
+  Footer,
+  Icon,
+  Button,
+  ButtonGroup,
+  Link,
+];
 
 function install(Vue) {
   components.forEach((comp) => {
@@ -27,6 +40,7 @@ export default {
   Icon,
   Button,
   ButtonGroup,
+  Link,
   install,
 };
 export {
@@ -40,5 +54,6 @@ export {
   Icon,
   Button,
   ButtonGroup,
+  Link,
   install,
 };
