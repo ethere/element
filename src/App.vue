@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    el-main
     <div>
       <el-link href="https://element.eleme.io" target="_blank">默认链接</el-link>
       <el-link type="primary">主要链接</el-link>
@@ -41,7 +42,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .el-link {
   margin-left: 20px;
 }

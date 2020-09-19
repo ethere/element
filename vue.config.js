@@ -1,4 +1,4 @@
-// const path = require('path');
+const path = require('path');
 
 module.exports = {
   // chainWebpack:(config)=>{
@@ -11,4 +11,11 @@ module.exports = {
       },
     },
   },
+
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: [__dirname,'src/assets/styles/_variables.scss']
+    }
+  }
 };
